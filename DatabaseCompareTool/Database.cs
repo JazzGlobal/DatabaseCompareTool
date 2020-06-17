@@ -33,5 +33,21 @@ namespace DatabaseCompareTool
             }
             conn.Close();
         }
+        public static List<String> GetDatabaseList()
+        {
+            SQLConnector conn = new SQLConnector("");
+            conn.InitializeConnection();
+            conn.Open();
+
+            var temp = new List<String>();
+            var reader = conn.ReadResults(conn.CreateCommand("SELECT name FROM master.sys.databases where name NOT IN ('master','model','msdb','tempdb')"));
+
+            while (reader.Read())
+            {
+                temp.Add(reader[0].ToString());
+            }
+            conn.Close();
+            return temp;
+        }
     }
 }
