@@ -48,5 +48,11 @@ namespace DatabaseCompareTool
         {
 
         }
+
+        private void clearButton_Click(object sender, EventArgs e)
+        {
+            firstDBTextBox.Text = null;
+            secondDBTextBox.Text = null;
+        }
     }
 }

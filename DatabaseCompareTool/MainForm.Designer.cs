@@ -35,11 +35,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.browseForFirstDB = new System.Windows.Forms.Button();
             this.browseForSecondDB = new System.Windows.Forms.Button();
+            this.clearButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // compareButton
             // 
-            this.compareButton.Location = new System.Drawing.Point(151, 121);
+            this.compareButton.Location = new System.Drawing.Point(235, 121);
             this.compareButton.Name = "compareButton";
             this.compareButton.Size = new System.Drawing.Size(185, 28);
             this.compareButton.TabIndex = 0;
@@ -99,11 +100,22 @@
             this.browseForSecondDB.UseVisualStyleBackColor = true;
             this.browseForSecondDB.Click += new System.EventHandler(this.browseForSecondDB_Click);
             // 
+            // clearButton
+            // 
+            this.clearButton.Location = new System.Drawing.Point(15, 121);
+            this.clearButton.Name = "clearButton";
+            this.clearButton.Size = new System.Drawing.Size(185, 28);
+            this.clearButton.TabIndex = 7;
+            this.clearButton.Text = "Clear";
+            this.clearButton.UseVisualStyleBackColor = true;
+            this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(522, 161);
+            this.Controls.Add(this.clearButton);
             this.Controls.Add(this.browseForSecondDB);
             this.Controls.Add(this.browseForFirstDB);
             this.Controls.Add(this.label2);
@@ -127,6 +139,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button browseForFirstDB;
         private System.Windows.Forms.Button browseForSecondDB;
+        private System.Windows.Forms.Button clearButton;
     }
 }
 
