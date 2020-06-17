@@ -49,8 +49,9 @@ namespace DatabaseCompareToolTests
                 Console.WriteLine(e);
             }
         }
+
         [TestMethod]
-        public void RetrieveTables_DatabaseHasOneTable_TablesIsGreaterThanZero()
+        public void RetrieveTables_DatabaseMoreThanZeroTables_TablesIsGreaterThanZero()
         {
             // Arrange
             CreateTestDatabase();
