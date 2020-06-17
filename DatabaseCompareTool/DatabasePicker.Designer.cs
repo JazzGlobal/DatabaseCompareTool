@@ -36,16 +36,16 @@
             // 
             this.databaseList.FormattingEnabled = true;
             this.databaseList.ItemHeight = 16;
-            this.databaseList.Location = new System.Drawing.Point(13, 13);
+            this.databaseList.Location = new System.Drawing.Point(12, 12);
             this.databaseList.Name = "databaseList";
-            this.databaseList.Size = new System.Drawing.Size(263, 228);
+            this.databaseList.Size = new System.Drawing.Size(454, 228);
             this.databaseList.TabIndex = 0;
             // 
             // chooseDataBase
             // 
-            this.chooseDataBase.Location = new System.Drawing.Point(13, 259);
+            this.chooseDataBase.Location = new System.Drawing.Point(12, 258);
             this.chooseDataBase.Name = "chooseDataBase";
-            this.chooseDataBase.Size = new System.Drawing.Size(263, 46);
+            this.chooseDataBase.Size = new System.Drawing.Size(454, 46);
             this.chooseDataBase.TabIndex = 1;
             this.chooseDataBase.Text = "Select";
             this.chooseDataBase.UseVisualStyleBackColor = true;
@@ -55,7 +55,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(288, 323);
+            this.ClientSize = new System.Drawing.Size(478, 323);
             this.Controls.Add(this.chooseDataBase);
             this.Controls.Add(this.databaseList);
             this.Name = "DatabasePicker";
