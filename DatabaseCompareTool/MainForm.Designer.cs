@@ -99,7 +99,7 @@
             this.browseForSecondDB.UseVisualStyleBackColor = true;
             this.browseForSecondDB.Click += new System.EventHandler(this.browseForSecondDB_Click);
             // 
-            // Form1
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -111,8 +111,8 @@
             this.Controls.Add(this.secondDBTextBox);
             this.Controls.Add(this.firstDBTextBox);
             this.Controls.Add(this.compareButton);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "MainForm";
+            this.Text = "Database Compare Tool";
             this.ResumeLayout(false);
             this.PerformLayout();
 
