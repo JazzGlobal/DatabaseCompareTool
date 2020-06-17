@@ -15,6 +15,22 @@ namespace DatabaseCompareTool
         public Form1()
         {
             InitializeComponent();
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+        }
+
+        private void browseForFirstDB_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void browseForSecondDB_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void compareButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
