@@ -24,7 +24,7 @@ namespace DatabaseCompareTool
             SQLConnector conn = new SQLConnector("");
             conn.InitializeConnection();
             conn.Open();
-            string sql = $"USE [{Name}] SELECT Name FROM sys.tables WHERE is_ms_shipped = 0";
+            string sql = $"USE [{Name}] SELECT Name FROM sys.tables WHERE is_ms_shipped = 0 order by Name";
             Console.WriteLine($"Getting Tables Using: {sql}");
             var reader = conn.ReadResults(conn.CreateCommand(sql));
             while (reader.Read())
