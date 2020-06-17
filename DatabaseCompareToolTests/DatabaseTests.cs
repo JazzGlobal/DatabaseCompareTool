@@ -9,10 +9,8 @@ namespace DatabaseCompareToolTests
     [TestClass]
     public class DatabaseTests
     {
-        [TestMethod]
-        public void RetrieveTables_DatabaseHasOneTable_TablesIsGreaterThanZero()
+        private void CreateTestDatabase()
         {
-            // Arrange
             SQLConnector conn;
             conn = new SQLConnector("");
             conn.InitializeConnection();
@@ -27,22 +25,18 @@ namespace DatabaseCompareToolTests
                 sql = File.ReadAllText(@"..\..\DBScripts\AddTable.sql");
                 conn.ReadResults(conn.CreateCommand(sql)).Close();
                 conn.Close();
-            } 
+            }
             catch (Exception e)
             {
                 Console.WriteLine(e);
             }
-
-            var db = new Database("CustomerDatabase");
-
-            // Act
-            db.RetrieveTables();
-
-            // Assert
-            Console.WriteLine($"Number of Tables in {db.Name}: {db.Tables.Count}");
-            Assert.IsTrue(db.Tables.Count == 1);
-
-            // Clean up
+        }
+        private void DeleteTestDatabase()
+        {
+            SQLConnector conn;
+            conn = new SQLConnector("");
+            conn.InitializeConnection();
+            string sql;
             try // Delete previously created database.
             {
                 sql = File.ReadAllText(@"..\..\DBScripts\DropTestDatabase.sql");
@@ -54,6 +48,24 @@ namespace DatabaseCompareToolTests
             {
                 Console.WriteLine(e);
             }
+        }
+        [TestMethod]
+        public void RetrieveTables_DatabaseHasOneTable_TablesIsGreaterThanZero()
+        {
+            // Arrange
+            CreateTestDatabase();
+
+            var db = new Database("CustomerDatabase");
+
+            // Act
+            db.RetrieveTables();
+
+            // Assert
+            Console.WriteLine($"Number of Tables in {db.Name}: {db.Tables.Count}");
+            Assert.IsTrue(db.Tables.Count == 1);
+
+            // Clean up
+            DeleteTestDatabase();
         }
     }
 }
