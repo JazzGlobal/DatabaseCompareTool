@@ -20,12 +20,28 @@ namespace DatabaseCompareTool
 
         private void browseForFirstDB_Click(object sender, EventArgs e)
         {
-
+            using (var picker = new DatabasePicker(secondDBTextBox.Text))
+            {
+                var result = picker.ShowDialog();
+                if (result == DialogResult.OK)
+                {
+                    Console.WriteLine("Hello World!");
+                    firstDBTextBox.Text = picker.SelectedDatabase;
+                }
+            }
         }
 
         private void browseForSecondDB_Click(object sender, EventArgs e)
         {
-
+            using (var picker = new DatabasePicker(firstDBTextBox.Text))
+            {
+                var result = picker.ShowDialog();
+                if (result == DialogResult.OK)
+                {
+                    Console.WriteLine("Hello World!");
+                    secondDBTextBox.Text = picker.SelectedDatabase;
+                }
+            }
         }
 
         private void compareButton_Click(object sender, EventArgs e)

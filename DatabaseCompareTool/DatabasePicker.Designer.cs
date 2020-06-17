@@ -49,6 +49,7 @@
             this.chooseDataBase.TabIndex = 1;
             this.chooseDataBase.Text = "Select";
             this.chooseDataBase.UseVisualStyleBackColor = true;
+            this.chooseDataBase.Click += new System.EventHandler(this.chooseDataBase_Click);
             // 
             // DatabasePicker
             // 
@@ -59,6 +60,7 @@
             this.Controls.Add(this.databaseList);
             this.Name = "DatabasePicker";
             this.Text = "Choose A Database";
+            this.Load += new System.EventHandler(this.DatabasePicker_Load);
             this.ResumeLayout(false);
 
         }
