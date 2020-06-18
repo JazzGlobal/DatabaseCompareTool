@@ -18,6 +18,7 @@ namespace DatabaseCompareTool
         public DatabasePicker(string selectionFromAlternateTextBox)
         {
             InitializeComponent();
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             this.selectionFromAlternateTextBox = selectionFromAlternateTextBox;
         }
 

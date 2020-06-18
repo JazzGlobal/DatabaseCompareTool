@@ -123,6 +123,7 @@
             this.Controls.Add(this.secondDBTextBox);
             this.Controls.Add(this.firstDBTextBox);
             this.Controls.Add(this.compareButton);
+            this.MaximizeBox = false;
             this.Name = "MainForm";
             this.Text = "Database Compare Tool";
             this.ResumeLayout(false);

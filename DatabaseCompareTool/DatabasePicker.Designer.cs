@@ -58,6 +58,7 @@
             this.ClientSize = new System.Drawing.Size(478, 323);
             this.Controls.Add(this.chooseDataBase);
             this.Controls.Add(this.databaseList);
+            this.MaximizeBox = false;
             this.Name = "DatabasePicker";
             this.Text = "Choose A Database";
             this.Load += new System.EventHandler(this.DatabasePicker_Load);
