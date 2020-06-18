@@ -25,7 +25,6 @@ namespace DatabaseCompareTool
                 var result = picker.ShowDialog();
                 if (result == DialogResult.OK)
                 {
-                    Console.WriteLine("Hello World!");
                     firstDBTextBox.Text = picker.SelectedDatabase;
                 }
             }
